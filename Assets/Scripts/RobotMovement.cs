@@ -3,8 +3,6 @@
 
 using System;
 using UnityEngine;
-using System.Collections;
-using UnityEditor.UIElements;
 
 public class RobotMovement : MonoBehaviour, IChargeable
 {
@@ -103,7 +101,7 @@ public class RobotMovement : MonoBehaviour, IChargeable
         
         if (nikola.color.b <= 0 || nikola.color.b >= 1)
         {
-            colorSwitch = colorSwitch * -1.0f;
+            colorSwitch *= -1.0f;
         }
         blue = nikola.color.b + colorSwitch * Time.deltaTime;
         nikola.color = new Color(1, 1, blue, 1);

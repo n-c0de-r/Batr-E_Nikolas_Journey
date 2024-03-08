@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PreasureButton : MonoBehaviour
+public class PressureButton : MonoBehaviour
 {
     public Vector3 originalPos;
     bool moveBack = false;
@@ -13,10 +11,6 @@ public class PreasureButton : MonoBehaviour
     {
         originalPos = transform.position;
         if (doorReverted!=null) doorReverted.SetActive(false);
-    }
-
-    private void OnTriggerEnter2D(Collider2D other) {
-        
     }
 
     private void OnTriggerStay2D(Collider2D other) {

@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 
 public class ScriptLight : MonoBehaviour
@@ -12,9 +8,8 @@ public class ScriptLight : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collider)
     {
         // Get anything that can be charged (has the Interface IChargeable)
-        chargeable = collider.GetComponent<IChargeable>();
-
-        if (chargeable != null)
+        
+        if (collider.TryGetComponent<IChargeable>(out chargeable))
         {
             /* Call the Interface's recharge function on what ever object
                Let each Object take care about their individual implementation. */
@@ -24,8 +19,7 @@ public class ScriptLight : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collider)
     {
-        chargeable = collider.GetComponent<IChargeable>();
-        if (chargeable != null)
+        if (collider.TryGetComponent<IChargeable>(out chargeable))
         {
             chargeable.resetColor();
         }
