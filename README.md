@@ -1,9 +1,9 @@
-# Batr-E - Nikola's Journey
+# [Batr-E - Nikola's Journey](https://n-c0de-r.itch.io/batr-e-nikolas-journey)
 
 ## Idea
 
 In the distant Solarpunk future, a small repair robot named Nikola is assigned to rebuild an old factory. There are no enemies, the environment and it's puzzles are "the enemy" - giving PvE a deeper meaning.
-![NightLifeDrive Title](./images/Batr-E_Title.png)
+![Batr-E Title](./images/Batr-E_Title.png)
 
 # My Contributions
 
